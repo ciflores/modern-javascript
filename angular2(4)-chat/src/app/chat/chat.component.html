@@ -1,0 +1,55 @@
+<div id="chat" class="height">
+    <div class="container-fluid height">
+        <div class="row height">
+            <div class="col-sm-4 members height">
+                <div class="row members-header">
+                	<h1>Members</h1>
+                </div>
+                <div class="row members-body">
+                    <ul class="list-group members-group">
+                        <li class="row list-group-item member-item justify-content-between bg-faded" *ngFor="let member of members">
+                        	<div class="col-xs-2">
+                        		<img src="{{member.avatar}}" class="rounded-circle mr-1">
+                        	</div>
+                        	<div class="col-xs-7">
+                            <small class="username"> {{ member.user }}</small>
+                          </div>
+                          <div class="col-xs-3">
+                            <p class="member-date"> {{ formatMemberDate(member.date) }} </p>
+                          </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-8 messages-main">
+                <div class="row messages-header">
+                  <h1>Messages</h1>
+                </div>
+                <div class="row messages-body">
+                    <div class="col-sm-12">
+                        <ul class="list-group message-group">
+                            <li class="row list-group-item message-item d-flex" *ngFor="let msg of messages" track-by="$index">
+                            		<hr>
+                                <div class="col-xs-1">
+                                	<img src="{{msg.avatar}}" class="rounded-circle float-left mr-2"> <!-- {{ msg.message }} -->
+                                </div>
+                                <div class="col-xs-11">
+                                	<p>{{msg.user}} @ {{ formatMessageDate(msg.date) }}</p>
+                                	<small class="message-text">{{ msg.message }}</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row messages-footer">
+                    <div class="input-group">
+                        <input type="text" class="form-control" v-focus="true" [(ngModel)]="message" (keyup.enter)="sendMessage()" placeholder="Message text...">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" type="button" [disabled]="!message">Send</button>
+              </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

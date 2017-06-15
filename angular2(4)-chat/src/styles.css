@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+chat-component{
+	position: absolute;
+	height: 100%;
+}
+h1{
+	padding: 0px 15px;
+}
+p{
+	color:darkgrey;
+	font-size:12px;
+}
+.height{
+	height: 100%;
+}
+.navbar {
+  background-color: #f8981d;
+}
+.members {
+  /*padding: 20px;*/
+  /*overflow-x: hidden;*/
+  overflow: auto;
+  /* Scrollable contents if viewport is shorter than content. */
+  border-right: 1px solid #eee;
+}
+.username{
+	/*padding-left: 5px;*/
+}
+.members-header {
+	position:relative;
+	z-index:5;
+	background-color: #EAF0E8;
+	color: #545456;
+	box-shadow:0 4px 2px -2px gray;;
+}
+.members-body {
+	background-color: #EAF0E8;
+}
+.member-date {
+	text-align:right;
+}
+.meessage-avatar {
+  float: left;
+  margin: 0px 15px 15px 0px;
+}
+.members-group {
+  width: 100%;
+  padding-left: 15px!important;
+}
+.messages-header {
+	position:relative;
+	z-index:5;
+  background-color: white;
+  color: #545456;
+  box-shadow:0 4px 2px -2px gray;
+}
+.messages-main {
+  height: 90vh;
+}
+.messages-body {
+  overflow: auto;
+  height: 75vh;
+}
+.message-text {
+	color: #444444;
+	font-size: 17px;
+}
+.messages-footer {
+  padding-top: 1rem;
+  padding-left: .25rem;
+  padding-right: .25rem;
+}
+.list-group-item {
+	background-color: transparent!important;
+	border:none!important;
+	padding: 10px 20px 10px 10px!important;
+}
+.list-group-item:first-child {
+  border-top: none;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.rounded-circle{
+	border-radius: 50%;
+}
+
