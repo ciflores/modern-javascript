@@ -4,8 +4,8 @@ import * as io from 'socket.io-client';
 
 export class ChatService {
   private url = 'http://localhost:5000';  
-  private socket = io(this.url);
-  //private socket = io('https://redis-chat-server.herokuapp.com/')
+  //private socket = io(this.url);
+  private socket = io('https://redis-chat-server.herokuapp.com/')
 
   on(eventName: string, callback: any){
     this.socket.on(eventName, callback);
